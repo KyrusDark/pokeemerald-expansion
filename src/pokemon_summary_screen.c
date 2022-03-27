@@ -1129,9 +1129,8 @@ static const struct CompressedSpritePalette sStatusIconsSpritePalette =
 {
     .data = gStatusPal_Icons,
     .tag = TAG_MON_STATUS
-};+ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void);
-+ void DestroyMonSpritesGfxManager(void);
-+ u8 *MonSpritesGfxManager_GetSpritePtr(u8 spriteNum);
+};
+
 static const struct SpriteTemplate sSpriteTemplate_StatusCondition =
 {
     .tileTag = TAG_MON_STATUS,
@@ -3988,7 +3987,7 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
             else
             {
                 HandleLoadSpecialPokePic(&gMonFrontPicTable[summary->species2],
-                                         MonSpritesGfxManager_GetSpritePtr(MON_SPR_GFX_MANAGER_A, B_POSITION_OPPONENT_LEFT),
+                                         MonSpritesGfxManager_GetSpritePtr(B_POSITION_OPPONENT_LEFT),
                                          summary->species2,
                                          summary->pid);
             }
