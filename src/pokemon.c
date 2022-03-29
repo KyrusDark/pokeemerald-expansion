@@ -7953,7 +7953,7 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
     }
  
     return sMonSpritesGfxManager;
-
+}
 void DestroyMonSpritesGfxManager(void)
 {
     struct MonSpritesGfxManager *gfx = sMonSpritesGfxManager;
@@ -8071,5 +8071,4 @@ u16 GetFormChangeTargetSpecies(struct Pokemon *mon, u16 method, u32 arg)
     }
 
     return species != targetSpecies ? targetSpecies : SPECIES_NONE;
-}
 }
